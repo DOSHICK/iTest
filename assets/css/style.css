@@ -82,6 +82,9 @@ body, body a, body input, body button {
   transition: all 0.3s ease 0s;
   cursor: pointer;
 }
+.header .header__top .header__top-wrapper .header__burger:hover span, .header .header__top .header__top-wrapper .header__burger:hover span::before, .header .header__top .header__top-wrapper .header__burger:hover span::after {
+  background: #FBFF3D;
+}
 .header .header__top .header__top-wrapper .header__burger span {
   width: 100%;
 }
@@ -123,6 +126,11 @@ body, body a, body input, body button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.header .header__top .header__top-wrapper .header__search:hover .header__search-img path {
+  fill: #FBFF3D;
 }
 .header .header__top .header__top-wrapper .header__search .header__search-img {
   display: block;
@@ -160,6 +168,11 @@ body, body a, body input, body button {
 }
 .header .header__top .header__top-wrapper .header__cart {
   display: none;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+.header .header__top .header__top-wrapper .header__cart:hover path {
+  fill: #FBFF3D;
 }
 .header .header__bottom {
   background: #1f497b;

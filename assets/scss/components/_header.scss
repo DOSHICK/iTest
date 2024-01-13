@@ -25,6 +25,13 @@
                 transition: all 0.3s ease 0s;
                 cursor: pointer;
                 &:hover {
+                    span{
+                        &,
+                    &::before,
+                    &::after {
+                        background: #FBFF3D;
+                    }
+                    }
                 }
 
                 span {
@@ -76,6 +83,16 @@
                 justify-content: center;
                 align-items: center;
 
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                .header__search-img {
+                    path{
+                        fill:#FBFF3D;
+                    }
+                }
+                }
+
                 .header__search-img {
                     display: block;
                     width: 13px;
@@ -118,6 +135,14 @@
 
             .header__cart {
                 display: none;
+
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                    path{
+                        fill: #FBFF3D;
+                    }
+                }
             }
         }
     }
