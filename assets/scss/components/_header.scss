@@ -107,6 +107,13 @@
 
                 text-decoration-line: underline;
                 text-decoration-skip-ink: none;
+
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                    color: #FBFF3D;
+                
+                }
             }
 
             .header__cart {
@@ -137,6 +144,12 @@
                             font-size: 16px;
                             font-weight: 700;
                             text-transform: uppercase;
+
+                            transition: all 0.3s ease 0s;
+                            cursor: pointer;
+                            &:hover{
+                                color: #FBFF3D;
+                            }
                         }
 
                         &:last-child {
@@ -159,6 +172,19 @@
                 span {
                     margin-left: 9px;
                     text-transform: uppercase;
+                }
+
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                    svg{
+                        path{
+                            fill: #FBFF3D;
+                        }
+                    }
+                    span{
+                        color: #FBFF3D;
+                    }
                 }
             }
         }
@@ -226,6 +252,7 @@
             background: #265c9a;
             display: none;
             &.active {
+                z-index: 3;
                 // background: #303030;
                 display: block;
                 position: absolute;
@@ -251,6 +278,7 @@
                                 cursor: pointer;
                                 width: 100%;
                                 &:hover {
+                                    color: #ffffff;
                                     background: #618cbf;
                                 }
                             }

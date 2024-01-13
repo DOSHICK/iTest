@@ -1,0 +1,280 @@
+.filters {
+    .filters__responsive {
+        padding-top: 16px;
+        padding-bottom: 10px;
+        display: none;
+
+        
+        flex-direction: row;
+        justify-content: space-between;
+        .filters__title {
+            color: #333;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .filters__btn {
+            background: none;
+            border: none;
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            &:hover{
+            
+            }
+        }
+    }
+    
+    .filters__content {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: flex;
+        flex-direction: row;
+        .filters__close{
+            display: none;
+        }
+        .filter {
+            width: 264px;
+            color: #484848;
+            min-height: 48px;
+            position: relative;
+            background: #fff;
+
+            margin-right: 14px;
+
+            .filter__wrapper {
+                z-index: 2;
+                width: 100%;
+                border: 1px solid #d0d0d0;
+                background: #fff;
+
+                &.filter-open {
+                    position: absolute;
+
+                    border: 1px solid #d0d0d0;
+                    position: absolute;
+                    width: 100%;
+                    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.15);
+
+                    .filter__head {
+                        border-bottom: none;
+                        position: relative;
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            bottom: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            display: block;
+                            height: 1px;
+                            width: calc(100% - (17px * 2));
+                            background: #d0d0d0;
+                        }
+
+                        img {
+                            transform: rotate(180deg);
+                        }
+                    }
+
+                    .filter__body {
+                        display: block;
+                        background: #fff;
+                        border-bottom: none;
+                        background: #fff;
+                    }
+                }
+                select {
+                    display: none;
+                }
+
+                .filter__head {
+                    padding: 14px 17px 13px 17px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    .filter__active {
+                    }
+
+                    transition: all 0.3s ease 0s;
+                    cursor: pointer;
+
+                    img {
+                        transition: all 0.3s ease 0s;
+                    }
+                }
+
+                .filter__body {
+                    display: none;
+                    .filter__item {
+                        padding: 7px 17px 7px 17px;
+
+                        transition: all 0.3s ease 0s;
+                        cursor: pointer;
+                        &:hover {
+                            background: #e8eeff;
+                        }
+                    }
+                }
+            }
+        }
+
+        .price {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            p {
+                margin-left: 9px;
+                margin-right: 9px;
+                text-transform: uppercase;
+                color: #484848;
+            }
+            .price__label {
+                position: relative;
+                border: 1px solid #d0d0d0;
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                padding-left: 40px;
+                width: 132px;
+
+                padding: 14px 11px 13px 40px;
+                span {
+                    position: absolute;
+                    color: #484848;
+                    left: 12px;
+                }
+                input {
+                    color: #484848;
+                    font-weight: 700;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                }
+
+                &:last-child {
+                    border-left: none;
+                }
+            }
+        }
+
+        .filter__submit{
+            display: none;
+
+            color: #FFF;
+            padding: 14px 30px 13px 30px;
+            background: #FF3D3D;
+
+            transition: all 0.3s ease 0s;
+            cursor: pointer;
+            border: none;
+            display: block;
+            width: 100%;
+            text-transform: uppercase;
+            &:hover{
+                background: #CE2929;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .filters {
+        .filters__responsive {
+            display: flex;
+            .filters__title {
+            }
+            .filters__btn {
+            }
+        }
+        .filters__content {
+            display: none;
+            background: #fff;
+            padding: 21px 18px 21px 18px;
+            max-width: 280px;
+            &.visible{
+                display: block;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                z-index: 6;
+            }
+
+            .filters__close{
+                display: block;
+                position: absolute;
+                top: -8px;
+                transform: translateY(-100%);
+                right: 0;
+
+                background: none;
+                border: none;
+
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+                &:hover{
+                
+                }
+            }
+            .filter {
+                margin: 0px 0px 19px 0px;
+                width: 100%;
+                .filter__wrapper {
+                    &.filter-open {
+                        .filter__head {
+                            &::after {
+                            }
+
+                            img {
+                            }
+                        }
+
+                        .filter__body {
+                        }
+                    }
+                    select {
+                    }
+
+                    .filter__head {
+
+                        .filter__active {
+                        }
+                        img {
+                        }
+                    }
+
+                    .filter__body {
+                        .filter__item {
+                            &:hover {
+                            }
+                        }
+                    }
+                }
+            }
+
+            .price {
+                flex-direction: column;
+                p {
+                    display: none;
+                }
+                .price__label {
+                    width: 100%;
+                    margin-bottom: 19px;
+                    span {
+                    }
+                    input {
+                        background: #fff;
+                    }
+
+                    &:last-child {
+                    }
+                }
+            }
+
+            .filter__submit{
+                display: block;
+            }
+        }
+    }
+}
