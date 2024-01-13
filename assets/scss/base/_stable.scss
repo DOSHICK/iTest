@@ -1,0 +1,19 @@
+body, body a, body input, body button {
+    font-family: $fontMain;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: calc(1128px + 86px * 2);
+    padding-left: 86px;
+    padding-right: 86px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media(max-width: 1024px){
+        max-width: calc(1128px + 20px * 2);
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
